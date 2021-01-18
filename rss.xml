@@ -3,8 +3,8 @@
 <channel>
 <title><![CDATA[notas]]></title>
 <description><![CDATA[notas]]></description>
-<link>http://misnotas.com/</link>
-<lastBuildDate>lun, 18 ene 2021 12:47:09 -0300</lastBuildDate>
+<link>http://martiyo.github.io/faq/</link>
+<lastBuildDate>lun, 18 ene 2021 17:11:03 -0300</lastBuildDate>
 <item>
   <title><![CDATA[Servidor webDAV]]></title>
   <description><![CDATA[
@@ -183,7 +183,7 @@ sudo find ~/webDAV -type f -exec chmod ug+rw {} \;
 </div>
 <div class="taglist"><a href="http://misnotas.com/tags.html">Tags</a>: <a href="http://misnotas.com/tag-linux.html">linux</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://misnotas.com/2020-12-23-servidor-webdav.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-23-servidor-webdav.html</link>
   <pubDate>mié, 23 dic 2020 17:24:00 -0300</pubDate>
 </item>
 <item>
@@ -288,7 +288,7 @@ sudo find ~/webDAV -type f -exec chmod ug+rw {} \;
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-21-emacs-bookmarks.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-21-emacs-bookmarks.html</link>
   <pubDate>lun, 21 dic 2020 11:06:00 -0300</pubDate>
 </item>
 <item>
@@ -657,7 +657,7 @@ rm eqsets.tar.gz
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://misnotas.com/2020-12-19-mocp.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-19-mocp.html</link>
   <pubDate>sáb, 19 dic 2020 20:21:00 -0300</pubDate>
 </item>
 <item>
@@ -834,7 +834,7 @@ rm eqsets.tar.gz
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-15-dired.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-15-dired.html</link>
   <pubDate>mar, 15 dic 2020 10:23:00 -0300</pubDate>
 </item>
 <item>
@@ -898,7 +898,7 @@ $ make
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://misnotas.com/2020-12-11-mplayer-resumer.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-11-mplayer-resumer.html</link>
   <pubDate>vie, 11 dic 2020 19:48:00 -0300</pubDate>
 </item>
 <item>
@@ -1058,7 +1058,7 @@ $ make
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-10-eww.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-10-eww.html</link>
   <pubDate>jue, 10 dic 2020 17:29:00 -0300</pubDate>
 </item>
 <item>
@@ -1247,7 +1247,7 @@ M-x package-install counsel
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-07-ivy-counsel-swiper.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-07-ivy-counsel-swiper.html</link>
   <pubDate>lun, 07 dic 2020 14:58:00 -0300</pubDate>
 </item>
 <item>
@@ -1314,7 +1314,7 @@ sudo npm i -g prettier
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-07-prettier-js.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-07-prettier-js.html</link>
   <pubDate>lun, 07 dic 2020 11:46:00 -0300</pubDate>
 </item>
 <item>
@@ -1708,7 +1708,7 @@ M-x package-install RET projectile RET
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-07-projectile.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-07-projectile.html</link>
   <pubDate>sáb, 05 dic 2020 19:53:00 -0300</pubDate>
 </item>
 <item>
@@ -1760,7 +1760,7 @@ M-x package-install RET projectile RET
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-12-07-autocompletar-.html</link>
+  <link>http://martiyo.github.io/faq/2020-12-07-autocompletar-.html</link>
   <pubDate>vie, 04 dic 2020 16:59:00 -0300</pubDate>
 </item>
 <item>
@@ -1817,7 +1817,7 @@ M-x google-translate-at-point
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://misnotas.com/2020-11-37-traductor-de-google-en-emacs.html</link>
+  <link>http://martiyo.github.io/faq/2020-11-37-traductor-de-google-en-emacs.html</link>
   <pubDate>vie, 27 nov 2020 17:40:00 -0300</pubDate>
 </item>
 <item>
@@ -1912,7 +1912,7 @@ docker exec -it mydatabase bash
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://misnotas.com/2020-11-20-instalar-mongodb-con-docker.html</link>
+  <link>http://martiyo.github.io/faq/2020-11-20-instalar-mongodb-con-docker.html</link>
   <pubDate>vie, 20 nov 2020 10:49:00 -0300</pubDate>
 </item>
 <item>
@@ -2021,7 +2021,7 @@ sudo usermod -aG docker your-user
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://misnotas.com/2020-11-06-instalar-docker.html</link>
+  <link>http://martiyo.github.io/faq/2020-11-06-instalar-docker.html</link>
   <pubDate>vie, 06 nov 2020 10:32:00 -0300</pubDate>
 </item>
 </channel>
