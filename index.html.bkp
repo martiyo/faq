@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="http://misnotas.com/rss.xml"
+      title="RSS feed for http://misnotas.com/"
+    />
+    <title>notas</title>
+    <meta name="author" content="martin" />
+    <meta name="referrer" content="no-referrer" />
+    <link href="static/style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="static/favicon.ico" />
+  </head>
+  <body>
+    <div id="preamble" class="status">
+      <div class="header">
+        <ul>
+          <li><a href="http://misnotas.com">/home</a></li>
+          <li><a href="http://misnotas.com">/about</a></li>
+          <li><a href="http://misnotas.com">/contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <h2 class="post-title">
+        <a href="http://misnotas.com/2020-12-07-ivy-counsel-swiper.html"
+          >ivy counsel swiper</a
+        >
+      </h2>
+      <div class="post-date">07 dic 2020</div>
+      <p>añlksdjf alskdfj ñlkasjdf</p>
+      <div class="taglist">
+        <a href="http://misnotas.com/tags.html">Tags</a>:
+        <a href="http://misnotas.com/tag-emacs.html">emacs</a>
+      </div>
+      <h2 class="post-title">
+        <a href="http://misnotas.com/2020-12-07-prettier-js.html"
+          >Formatear codigo con prettier-js</a
+        >
+      </h2>
+      <div class="post-date">07 dic 2020</div>
+      <p>
+        Prettier-js es una función que formatea el buffer actual usando
+        Prettier. (&#x2026;)
+      </p>
+      (...)
+      <div class="taglist">
+        <a href="http://misnotas.com/tags.html">Tags</a>:
+        <a href="http://misnotas.com/tag-emacs.html">emacs</a>
+      </div>
+      <div id="archive">
+        <a href="http://misnotas.com/archive.html">Other posts</a>
+      </div>
+    </div>
+    <div id="postamble" class="status">
+      <div id="archive">
+        <a href="http://misnotas.com/archive.html">Other posts</a>
+      </div>
+    </div>
+  </body>
+</html>
