@@ -1,10 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
 <channel>
-<title><![CDATA[notas]]></title>
-<description><![CDATA[notas]]></description>
-<link>http://martiyo.github.io/faq/</link>
-<lastBuildDate>lun, 18 ene 2021 17:11:03 -0300</lastBuildDate>
+<title><![CDATA[EmacsFAQ]]></title>
+<description><![CDATA[EmacsFAQ]]></description>
+<link>https://martiyo.github.io/faq/</link>
+<lastBuildDate>mié, 20 ene 2021 08:02:52 -0300</lastBuildDate>
+<item>
+  <title><![CDATA[Todo el poder a la shell!]]></title>
+  <description><![CDATA[
+
+      <div id="outline-container-org2e2ef17" class="outline-2">
+        <h2 id="aweshell"><a id="org2e2ef17"></a>Aweshell</h2>
+        <div class="outline-text-2" id="text-aweshell">
+          <p>
+            Aweshell en un paquete de emacs que sirve para darle más poder a
+            eshell.
+          </p>
+        </div>
+
+        <div id="outline-container-org7e36caf" class="outline-3">
+          <h3 id="características"><a id="org7e36caf"></a>Características:</h3>
+          <div class="outline-text-3" id="text-características">
+            <ul class="org-ul">
+              <li>Crear y gestionar múltiples buffers eshell.</li>
+              <li>
+                Añade algunos comandos útiles, como: limpiar el buffer, cambiar
+                a sudo, etc.
+              </li>
+              <li>
+                Mostrar información extra y color como zsh, impulsado por
+                "eshell-prompt-extras
+              </li>
+              <li>Validar y resaltar el comando antes de enviar a eshell.</li>
+              <li>Cambiar el nombre del buffer por el nombre de directorio.</li>
+              <li>Agregar las terminaciones para el comando git.</li>
+              <li>Integrar "eshell".</li>
+              <li>Descomprimir archivos.</li>
+              <li>Abrir el archivo con el alias e.</li>
+              <li>Salida "¿Quiso decir&#x2026;?" ayudante al escribir.</li>
+              <li>Hacer archivo cat con resaltado de sintaxis.</li>
+              <li>
+                Avisar al usuario cuando el proceso de fondo termine o sea
+                abortado.
+              </li>
+              <li>
+                Completar los argumentos de los comandos del shell como el
+                sentimiento IDE.
+              </li>
+              <li>
+                Ventana de shell dedicada como la ventana del terminal inferior
+                del IDE
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="outline-container-org5f39130" class="outline-3">
+          <h3 id="instalación"><a id="org5f39130"></a>Instalación:</h3>
+          <div class="outline-text-3" id="text-instalación">
+            <p>El proyecto está en github entonces:</p>
+
+            <pre class="example">
+cd .emacs.d
+git clone https://github.com/manateelazycat/aweshell.git
+</pre
+            >
+
+            <p>
+              después hay que agregar el load-path en el archivo <b>.emacs</b>.
+            </p>
+
+            <pre class="example">
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/aweshell"))
+(require 'aweshell)
+</pre
+            >
+          </div>
+        </div>
+
+        <div id="outline-container-org0027f85" class="outline-3">
+          <h3 id="comandos-de-aweshell-y-mis-atajos-en-emacs">
+            <a id="org0027f85"></a>Comandos de aweshell y mis atajos en emacs:
+          </h3>
+          <div
+            class="outline-text-3"
+            id="text-comandos-de-aweshell-y-mis-atajos-en-emacs"
+          >
+            <table>
+              <colgroup>
+                <col class="org-left" />
+
+                <col class="org-left" />
+
+                <col class="org-left" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" class="org-left">Comando</th>
+                  <th scope="col" class="org-left">Abreviación</th>
+                  <th scope="col" class="org-left">Atajo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="org-left">aweshell-new</td>
+                  <td class="org-left">M-x aw-new RET</td>
+                  <td class="org-left">C-xn</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-next</td>
+                  <td class="org-left">M-x aw-nex RET</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-prev</td>
+                  <td class="org-left">M-x aw-p RET</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-clear-buffer</td>
+                  <td class="org-left">&#xa0;</td>
+                  <td class="org-left">C-l</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-sudo-toggle</td>
+                  <td class="org-left">&#xa0;</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-switch-buffer</td>
+                  <td class="org-left">M-x a-sw RET</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-dedicated-toggle</td>
+                  <td class="org-left">M-x a-d-t RET</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-dedicated-open</td>
+                  <td class="org-left">M-x aw-o RET</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+
+                <tr>
+                  <td class="org-left">aweshell-dedicated-close</td>
+                  <td class="org-left">M-x aw&#x2013;c RET</td>
+                  <td class="org-left">&#xa0;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-emacs.html">emacs</a>
+      </div>
+    ]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://martiyo.github.io/faq/2021-01-20-Aweshell.html</link>
+  <pubDate>mié, 20 ene 2021 07:54:00 -0300</pubDate>
+</item>
 <item>
   <title><![CDATA[Servidor webDAV]]></title>
   <description><![CDATA[
@@ -183,7 +347,7 @@ sudo find ~/webDAV -type f -exec chmod ug+rw {} \;
 </div>
 <div class="taglist"><a href="http://misnotas.com/tags.html">Tags</a>: <a href="http://misnotas.com/tag-linux.html">linux</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-23-servidor-webdav.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-23-servidor-webdav.html</link>
   <pubDate>mié, 23 dic 2020 17:24:00 -0300</pubDate>
 </item>
 <item>
@@ -288,7 +452,7 @@ sudo find ~/webDAV -type f -exec chmod ug+rw {} \;
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-21-emacs-bookmarks.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-21-emacs-bookmarks.html</link>
   <pubDate>lun, 21 dic 2020 11:06:00 -0300</pubDate>
 </item>
 <item>
@@ -657,7 +821,7 @@ rm eqsets.tar.gz
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-19-mocp.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-19-mocp.html</link>
   <pubDate>sáb, 19 dic 2020 20:21:00 -0300</pubDate>
 </item>
 <item>
@@ -834,7 +998,7 @@ rm eqsets.tar.gz
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-15-dired.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-15-dired.html</link>
   <pubDate>mar, 15 dic 2020 10:23:00 -0300</pubDate>
 </item>
 <item>
@@ -898,7 +1062,7 @@ $ make
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-11-mplayer-resumer.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-11-mplayer-resumer.html</link>
   <pubDate>vie, 11 dic 2020 19:48:00 -0300</pubDate>
 </item>
 <item>
@@ -1058,7 +1222,7 @@ $ make
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-10-eww.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-10-eww.html</link>
   <pubDate>jue, 10 dic 2020 17:29:00 -0300</pubDate>
 </item>
 <item>
@@ -1247,7 +1411,7 @@ M-x package-install counsel
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-07-ivy-counsel-swiper.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-07-ivy-counsel-swiper.html</link>
   <pubDate>lun, 07 dic 2020 14:58:00 -0300</pubDate>
 </item>
 <item>
@@ -1314,7 +1478,7 @@ sudo npm i -g prettier
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-07-prettier-js.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-07-prettier-js.html</link>
   <pubDate>lun, 07 dic 2020 11:46:00 -0300</pubDate>
 </item>
 <item>
@@ -1708,7 +1872,7 @@ M-x package-install RET projectile RET
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-07-projectile.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-07-projectile.html</link>
   <pubDate>sáb, 05 dic 2020 19:53:00 -0300</pubDate>
 </item>
 <item>
@@ -1760,7 +1924,7 @@ M-x package-install RET projectile RET
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-12-07-autocompletar-.html</link>
+  <link>https://martiyo.github.io/faq/2020-12-07-autocompletar-.html</link>
   <pubDate>vie, 04 dic 2020 16:59:00 -0300</pubDate>
 </item>
 <item>
@@ -1817,7 +1981,7 @@ M-x google-translate-at-point
       </div>
     ]]></description>
   <category><![CDATA[emacs]]></category>
-  <link>http://martiyo.github.io/faq/2020-11-37-traductor-de-google-en-emacs.html</link>
+  <link>https://martiyo.github.io/faq/2020-11-37-traductor-de-google-en-emacs.html</link>
   <pubDate>vie, 27 nov 2020 17:40:00 -0300</pubDate>
 </item>
 <item>
@@ -1912,7 +2076,7 @@ docker exec -it mydatabase bash
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://martiyo.github.io/faq/2020-11-20-instalar-mongodb-con-docker.html</link>
+  <link>https://martiyo.github.io/faq/2020-11-20-instalar-mongodb-con-docker.html</link>
   <pubDate>vie, 20 nov 2020 10:49:00 -0300</pubDate>
 </item>
 <item>
@@ -2021,7 +2185,7 @@ sudo usermod -aG docker your-user
       </div>
     ]]></description>
   <category><![CDATA[linux]]></category>
-  <link>http://martiyo.github.io/faq/2020-11-06-instalar-docker.html</link>
+  <link>https://martiyo.github.io/faq/2020-11-06-instalar-docker.html</link>
   <pubDate>vie, 06 nov 2020 10:32:00 -0300</pubDate>
 </item>
 </channel>
