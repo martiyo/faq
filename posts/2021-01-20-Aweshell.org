@@ -30,7 +30,7 @@ Aweshell en un paquete de emacs que sirve para darle más poder a eshell.
 - Avisar al usuario cuando el proceso de fondo termine o sea abortado.
 - Completar los argumentos de los comandos del shell como el sentimiento
   IDE.
-- Ventana de shell dedicada como la ventana del terminal inferior del
+- Ventana de shell dedicada como la ventana del terminal inferior de un
   IDE
 
 ** Instalación:

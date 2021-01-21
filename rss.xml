@@ -4,13 +4,219 @@
 <title><![CDATA[EmacsFAQ]]></title>
 <description><![CDATA[EmacsFAQ]]></description>
 <link>https://martiyo.github.io/faq/</link>
-<lastBuildDate>mié, 20 ene 2021 08:02:52 -0300</lastBuildDate>
+<lastBuildDate>jue, 21 ene 2021 12:20:01 -0300</lastBuildDate>
+<item>
+  <title><![CDATA[Planificación y administración de tareas con Cron y Crontab]]></title>
+  <description><![CDATA[
+
+      <div id="outline-container-org70efff1" class="outline-2">
+        <h2 id="cron"><a id="org70efff1"></a>Cron</h2>
+        <div class="outline-text-2" id="text-cron">
+          <p>
+            En el sistema operativo Unix, cron es un administrador regular de
+            procesos en segundo plano (demonio) que ejecuta procesos o guiones a
+            intervalos regulares (por ejemplo, cada minuto, día, semana o mes).
+            Los procesos que deben ejecutarse y la hora en la que deben hacerlo
+            se especifican en el fichero crontab. Este servicio es muy útil para
+            realizar tareas de mantenimiento como copias de respaldo del
+            sistema, verificación del equipo o estadísticas de uso.
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-org9840cc1" class="outline-2">
+        <h2 id="crontab-del-usuario">
+          <a id="org9840cc1"></a>Crontab del usuario
+        </h2>
+        <div class="outline-text-2" id="text-crontab-del-usuario">
+          <p>
+            Cada usuario puede definir sus propias tareas, éstas se ejecutaran
+            con los privilegios del usuario que las ha definido, el demonio cron
+            primero busca dichas tareas, que se almacenan en
+            <b><i>var/spool/cron/crontabs</i></b>
+            donde cada archivo lleva el nombre del login de cada usuario.
+            Después levanta los crontabs del sistema, los cuales se almacenan en
+            el
+            <b>/etc/crontab</b> y en el directorio <b>/etc/cron.d</b>. Para
+            editar el crontab del usuario se usa el comando
+            <b><i>crontab</i></b>
+          </p>
+        </div>
+
+        <ul class="org-ul">
+          <li>
+            <a id="sintaxis-del-comando"></a><a id="org01692ec"></a>Sintaxis del
+            comando:<br />
+            <div class="outline-text-5" id="text-sintaxis-del-comando">
+              <pre class="example">
+crontab [opciones][usuario]
+</pre
+              >
+
+              <p>
+                <b>crontab -l</b> lista el contenido de la tabla de tareas.
+                <b>crontab -e</b>
+                edita el contenido de la tabla de tareas.
+              </p>
+
+              <p>
+                Cuando se ejecuta crontab -e por primera vez pregunta que editor
+                de texto que se va usar y guarda ésta información en el archivo
+                <b>~/.selected\<sub>editor</sub></b>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a id="formato-de-la-tabla-de-tareas"></a
+            ><a id="org5fb8f58"></a>Formato de la tabla de tareas<br />
+            <div class="outline-text-5" id="text-formato-de-la-tabla-de-tareas">
+              <p>
+                .----------&#x2013;&#x2014; minuto (0-59) |
+                .-------&#x2013;&#x2014; hora (0-23) | | .----&#x2013;&#x2014;
+                día del mes (1-31) | | | .-&#x2013;&#x2014; mes (1-12) o
+                jan,feb,mar,apr,may,jun,jul&#x2026; (meses en inglés) | | | |
+                .&#x2014; día de la semana (0-6) (domingo=0 ó 7) o
+                sun,mon,tue,wed,thu,fri,sat | | | | | * *
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="outline-container-orgba364a8" class="outline-2">
+        <h2 id="orgba364a8">Comando a ejecutar</h2>
+        <div class="outline-text-2" id="text-orgba364a8">
+          <p>
+            Se pueden utilizar asteriscos para especificar todos (ejemplo: todos
+            los días de la semana), guiones para especificar rangos (ejemplo: de
+            miércoles a domingo, <b><i>0-3</i></b
+            >) y comas para momentos exactos(ejemplo: a los 0, 10 y 30 minutos,
+            <b><i>0, 10, 30</i></b
+            >).
+          </p>
+        </div>
+
+        <div id="outline-container-org104eb40" class="outline-4">
+          <h4 id="ejemplos"><a id="org104eb40"></a>Ejemplos</h4>
+          <div class="outline-text-4" id="text-ejemplos">
+            <ul class="org-ul">
+              <li>
+                <p>Una vez por semana</p>
+
+                <pre class="example">
+0 * * * * /usr/local/bin/updatedb.sh  
+</pre
+                >
+
+                <p>
+                  en el minuto 0 de cada hora, ejecutar el script
+                  <b>/usr/local/bin/updatedb.sh</b>, todas las horas, todos los
+                  días del mes, todos los meses y todos los días de la semana.
+                </p>
+              </li>
+
+              <li>
+                <p>Una vez por día</p>
+
+                <pre class="example">
+01 04 * * * /usr/local/bin/updatedb.sh  
+</pre
+                >
+
+                <p>en el minuto 01 de la hora 04 ejecutar &#x2026;</p>
+              </li>
+
+              <li>
+                <p>Una vez por mes</p>
+
+                <pre class="example">
+01 04 01 * * /usr/local/bin/updatedb.sh  
+</pre
+                >
+
+                <p>
+                  en el minuto 01 de la hora 04 el día 01 de cada mes ejecutar
+                  &#x2026;
+                </p>
+              </li>
+
+              <li>
+                <p>una vez por año</p>
+
+                <pre class="example">
+01 04 01 01 * /usr/local/bin/updatedb.sh
+</pre
+                >
+
+                <p>
+                  en el minuto 01 de la hora 04 el día 01 del mes 01 de cada año
+                  ejecutar &#x2026;
+                </p>
+              </li>
+
+              <li>
+                <p>dos veces por semana</p>
+
+                <pre class="example">
+0 0 * * 1,3 /usr/local/bin/updatedb.sh 
+</pre
+                >
+
+                <p>
+                  a las 12 de la noche, todos los lunes y miércoles de todos los
+                  meses, de cada año ejecutar&#x2026;
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="outline-container-org3cd4f17" class="outline-3">
+          <h3 id="crontab-del-sistema">
+            <a id="org3cd4f17"></a>Crontab del sistema
+          </h3>
+          <div class="outline-text-3" id="text-crontab-del-sistema">
+            <p>
+              Se utiliza cuando se requiere que una tarea se ejecute con
+              privilegios de root. La definición es igual a la del crontab del
+              usuario solo que debe agregarse el campo usuario. Es posible
+              editar directamente el archivo*/etc/crontab*, aunque es mejor
+              agregar la definición dentro del directorio <b>/etc/cron.d</b> que
+              sirve para almacenar los cronjobs de los diferentes usuarios. Por
+              ejemplo
+            </p>
+
+            <pre class="example">
+0 0 * * 1,3 root /usr/local/bin/updatedb.sh 
+</pre
+            >
+
+            <p>
+              El usuario root también tiene la posibilidad de usar los archivos
+              <b>/etc/cron.hourly</b>, <b>/etc/cron.daily</b>
+              <b>/etc/cron.weekly</b> y <b>/etc/cron.monthly</b>. En estos
+              archivos se pueden ubicar los scripts que serán ejecutados cada
+              hora, cada día, cada semana o cada mes según corresponda.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
+      </div>
+    ]]></description>
+  <category><![CDATA[linux]]></category>
+  <link>https://martiyo.github.io/faq/2018-09-15-Cron.html</link>
+  <pubDate>jue, 21 ene 2021 12:18:00 -0300</pubDate>
+</item>
 <item>
   <title><![CDATA[Todo el poder a la shell!]]></title>
   <description><![CDATA[
 
-      <div id="outline-container-org2e2ef17" class="outline-2">
-        <h2 id="aweshell"><a id="org2e2ef17"></a>Aweshell</h2>
+      <div id="outline-container-orgbfa4d31" class="outline-2">
+        <h2 id="aweshell"><a id="orgbfa4d31"></a>Aweshell</h2>
         <div class="outline-text-2" id="text-aweshell">
           <p>
             Aweshell en un paquete de emacs que sirve para darle más poder a
@@ -18,8 +224,8 @@
           </p>
         </div>
 
-        <div id="outline-container-org7e36caf" class="outline-3">
-          <h3 id="características"><a id="org7e36caf"></a>Características:</h3>
+        <div id="outline-container-org320b128" class="outline-3">
+          <h3 id="características"><a id="org320b128"></a>Características:</h3>
           <div class="outline-text-3" id="text-características">
             <ul class="org-ul">
               <li>Crear y gestionar múltiples buffers eshell.</li>
@@ -49,14 +255,14 @@
               </li>
               <li>
                 Ventana de shell dedicada como la ventana del terminal inferior
-                del IDE
+                de un IDE
               </li>
             </ul>
           </div>
         </div>
 
-        <div id="outline-container-org5f39130" class="outline-3">
-          <h3 id="instalación"><a id="org5f39130"></a>Instalación:</h3>
+        <div id="outline-container-org573bc84" class="outline-3">
+          <h3 id="instalación"><a id="org573bc84"></a>Instalación:</h3>
           <div class="outline-text-3" id="text-instalación">
             <p>El proyecto está en github entonces:</p>
 
@@ -78,9 +284,9 @@ git clone https://github.com/manateelazycat/aweshell.git
           </div>
         </div>
 
-        <div id="outline-container-org0027f85" class="outline-3">
+        <div id="outline-container-org410d6c9" class="outline-3">
           <h3 id="comandos-de-aweshell-y-mis-atajos-en-emacs">
-            <a id="org0027f85"></a>Comandos de aweshell y mis atajos en emacs:
+            <a id="org410d6c9"></a>Comandos de aweshell y mis atajos en emacs:
           </h3>
           <div
             class="outline-text-3"
@@ -2187,6 +2393,127 @@ sudo usermod -aG docker your-user
   <category><![CDATA[linux]]></category>
   <link>https://martiyo.github.io/faq/2020-11-06-instalar-docker.html</link>
   <pubDate>vie, 06 nov 2020 10:32:00 -0300</pubDate>
+</item>
+<item>
+  <title><![CDATA[El demonio miniDLNA]]></title>
+  <description><![CDATA[
+
+      <div id="outline-container-org6bfcae8" class="outline-2">
+        <h2 id="minidlnad---servidor-ligero-dlnaupnp-av">
+          <a id="org6bfcae8"></a>minidlnad - Servidor ligero DLNA/UPnP-AV
+        </h2>
+        <div
+          class="outline-text-2"
+          id="text-minidlnad---servidor-ligero-dlnaupnp-av"
+        >
+          <p>
+            El demonio minidlnad es un servidor DLNA/UPnP-AV que comparte
+            archivos multimedia(vídeo, música e imágenes) a los clientes de una
+            red. Estos son típicamente reproductores multimedia como vlc, totem
+            y mplayer, y dispositivos como reproductores multimedia portátiles,
+            teléfonos inteligentes y televisores, sistemas de entretenimiento de
+            videojuegos y reproductores de Blu-ray. De forma predeterminada,
+            minidlnad escucha en todas las interfaces de red (excepto loopback).
+            Este comportamiento se puede cambiar usando la opción -i, o en el
+            archivo de configuración a través de la opción
+            network\<sub>interface</sub>.
+          </p>
+        </div>
+
+        <div id="outline-container-org4fbf9b7" class="outline-3">
+          <h3 id="configuracion-minima">
+            <a id="org4fbf9b7"></a>Configuracion minima
+          </h3>
+          <div class="outline-text-3" id="text-configuracion-minima">
+            <p>
+              El archivo de configuración por defecto es
+              <b>/etc/minidlna.conf</b>, o el especificado con el flag
+              <b>-f</b>. Para que el servidor funcione basta con editar un par
+              de lineas:
+            </p>
+
+            <p>
+              <b>'media\<sub>dir</sub>=/path/peliculas'</b>
+            </p>
+
+            <p>
+              <b>'port=8200'</b>
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-orga03cb7d" class="outline-3">
+          <h3 id="otras-opciónes-de-configuración">
+            <a id="orga03cb7d"></a>Otras opciónes de configuración
+          </h3>
+          <div class="outline-text-3" id="text-otras-opciónes-de-configuración">
+            <p>
+              <b>'inotify'</b> Detecta automáticamente nuevos archivos en
+              media\<sub>dir</sub>.
+            </p>
+
+            <p>
+              <b>'log\<sub>dir</sub>'</b> Ruta al directorio donde se almacenan
+              los archivos de registro. Por defecto es /var/log.
+            </p>
+
+            <p>
+              <b>'max\<sub>connections</sub>'</b> Especifica el numero maximo de
+              conecciones simultaneas
+            </p>
+
+            <p>
+              <b>'friendly\<sub>name</sub>'</b> Configura el nombre del servidor
+              que se mostrara a los clientes.
+            </p>
+
+            <p>
+              <b>'media\<sub>dir</sub>'</b> Ruta al directorio que contiene los
+              archivos multimedia que se quiren compartir. Esta opción se puede
+              usar varias veces si se tiene mas de un directorio. Para
+              restringir una ruta a un tipo de archivo especifico (audio,
+              videos, fotos), se usa la siguiente sintaxis
+              <b>media\<sub>dir</sub>=[A,V,P], /path/multimedia</b>
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org7e9f321" class="outline-3">
+          <h3 id="ejemplos"><a id="org7e9f321"></a>Ejemplos</h3>
+          <div class="outline-text-3" id="text-ejemplos">
+            <pre class="example">
+media_dir=V,/path/multimedia/videos
+media_dir=P,/path/multimedia/fotos
+media_dir=A,/path/multimedia/musica\n
+</pre
+            >
+
+            <p>
+              <b>'merge\<sub>media</sub>\<sub>dirs</sub>'</b> Fusiona todos los
+              contenidos base de media\<sub>dir</sub>
+              en el contenedor raíz. El valor por defecto es no.
+            </p>
+
+            <p>
+              <b>'network\<sub>interface</sub>'</b> Interfaz(es) de red a las
+              que se debe enlazar (por ejemplo, eth0), delimitadas por comas.
+              Esta opción se puede especificar más de una vez. Si no se
+              especifica, minidlnad se une a todas las interfaces de red
+              válidas.
+            </p>
+
+            <p>Fuente man minidlna, man minidlna.conf</p>
+          </div>
+        </div>
+      </div>
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
+      </div>
+    ]]></description>
+  <category><![CDATA[linux]]></category>
+  <link>https://martiyo.github.io/faq/2018-02-27-el-demonio-minidlna.html</link>
+  <pubDate>jue, 22 feb 2018 03:04:00 -0300</pubDate>
 </item>
 </channel>
 </rss>
