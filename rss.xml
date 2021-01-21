@@ -4,29 +4,23 @@
 <title><![CDATA[EmacsFAQ]]></title>
 <description><![CDATA[EmacsFAQ]]></description>
 <link>https://martiyo.github.io/faq/</link>
-<lastBuildDate>jue, 21 ene 2021 17:01:44 -0300</lastBuildDate>
+<lastBuildDate>jue, 21 ene 2021 19:04:50 -0300</lastBuildDate>
 <item>
   <title><![CDATA[Planificación y administración de tareas con Cron y Crontab]]></title>
   <description><![CDATA[
+      <p>
+        En el sistema operativo Unix, cron es un administrador regular de
+        procesos en segundo plano (demonio) que ejecuta procesos o guiones a
+        intervalos regulares (por ejemplo, cada minuto, día, semana o mes). Los
+        procesos que deben ejecutarse y la hora en la que deben hacerlo se
+        especifican en el fichero crontab. Este servicio es muy útil para
+        realizar tareas de mantenimiento como copias de respaldo del sistema,
+        verificación del equipo o estadísticas de uso.
+      </p>
 
-      <div id="outline-container-org70efff1" class="outline-2">
-        <h2 id="cron"><a id="org70efff1"></a>Cron</h2>
-        <div class="outline-text-2" id="text-cron">
-          <p>
-            En el sistema operativo Unix, cron es un administrador regular de
-            procesos en segundo plano (demonio) que ejecuta procesos o guiones a
-            intervalos regulares (por ejemplo, cada minuto, día, semana o mes).
-            Los procesos que deben ejecutarse y la hora en la que deben hacerlo
-            se especifican en el fichero crontab. Este servicio es muy útil para
-            realizar tareas de mantenimiento como copias de respaldo del
-            sistema, verificación del equipo o estadísticas de uso.
-          </p>
-        </div>
-      </div>
-
-      <div id="outline-container-org9840cc1" class="outline-2">
+      <div id="outline-container-org5e5b2b2" class="outline-2">
         <h2 id="crontab-del-usuario">
-          <a id="org9840cc1"></a>Crontab del usuario
+          <a id="org5e5b2b2"></a>Crontab del usuario
         </h2>
         <div class="outline-text-2" id="text-crontab-del-usuario">
           <p>
@@ -45,7 +39,7 @@
 
         <ul class="org-ul">
           <li>
-            <a id="sintaxis-del-comando"></a><a id="org01692ec"></a>Sintaxis del
+            <a id="sintaxis-del-comando"></a><a id="orgb5c6cc3"></a>Sintaxis del
             comando:<br />
             <div class="outline-text-5" id="text-sintaxis-del-comando">
               <pre class="example">
@@ -69,7 +63,7 @@ crontab [opciones][usuario]
 
           <li>
             <a id="formato-de-la-tabla-de-tareas"></a
-            ><a id="org5fb8f58"></a>Formato de la tabla de tareas<br />
+            ><a id="org95e5b49"></a>Formato de la tabla de tareas<br />
             <div class="outline-text-5" id="text-formato-de-la-tabla-de-tareas">
               <p>
                 .----------&#x2013;&#x2014; minuto (0-59) |
@@ -84,9 +78,9 @@ crontab [opciones][usuario]
         </ul>
       </div>
 
-      <div id="outline-container-orgba364a8" class="outline-2">
-        <h2 id="orgba364a8">Comando a ejecutar</h2>
-        <div class="outline-text-2" id="text-orgba364a8">
+      <div id="outline-container-orgbd54bf5" class="outline-2">
+        <h2 id="orgbd54bf5">Comando a ejecutar</h2>
+        <div class="outline-text-2" id="text-orgbd54bf5">
           <p>
             Se pueden utilizar asteriscos para especificar todos (ejemplo: todos
             los días de la semana), guiones para especificar rangos (ejemplo: de
@@ -97,8 +91,8 @@ crontab [opciones][usuario]
           </p>
         </div>
 
-        <div id="outline-container-org104eb40" class="outline-4">
-          <h4 id="ejemplos"><a id="org104eb40"></a>Ejemplos</h4>
+        <div id="outline-container-org53722b8" class="outline-4">
+          <h4 id="ejemplos"><a id="org53722b8"></a>Ejemplos</h4>
           <div class="outline-text-4" id="text-ejemplos">
             <ul class="org-ul">
               <li>
@@ -172,9 +166,9 @@ crontab [opciones][usuario]
           </div>
         </div>
 
-        <div id="outline-container-org3cd4f17" class="outline-3">
+        <div id="outline-container-org65dbb80" class="outline-3">
           <h3 id="crontab-del-sistema">
-            <a id="org3cd4f17"></a>Crontab del sistema
+            <a id="org65dbb80"></a>Crontab del sistema
           </h3>
           <div class="outline-text-3" id="text-crontab-del-sistema">
             <p>
@@ -214,156 +208,149 @@ crontab [opciones][usuario]
 <item>
   <title><![CDATA[Todo el poder a la shell!]]></title>
   <description><![CDATA[
+      <p>
+        Aweshell en un paquete de emacs que sirve para darle más poder a eshell.
+      </p>
 
-      <div id="outline-container-orgbfa4d31" class="outline-2">
-        <h2 id="aweshell"><a id="orgbfa4d31"></a>Aweshell</h2>
-        <div class="outline-text-2" id="text-aweshell">
-          <p>
-            Aweshell en un paquete de emacs que sirve para darle más poder a
-            eshell.
-          </p>
+      <div id="outline-container-orgc6ea1bb" class="outline-2">
+        <h2 id="características"><a id="orgc6ea1bb"></a>Características:</h2>
+        <div class="outline-text-2" id="text-características">
+          <ul class="org-ul">
+            <li>Crear y gestionar múltiples buffers eshell.</li>
+            <li>
+              Añade algunos comandos útiles, como: limpiar el buffer, cambiar a
+              sudo, etc.
+            </li>
+            <li>
+              Mostrar información extra y color como zsh, impulsado por
+              "eshell-prompt-extras
+            </li>
+            <li>Validar y resaltar el comando antes de enviar a eshell.</li>
+            <li>Cambiar el nombre del buffer por el nombre de directorio.</li>
+            <li>Agregar las terminaciones para el comando git.</li>
+            <li>Integrar "eshell".</li>
+            <li>Descomprimir archivos.</li>
+            <li>Abrir el archivo con el alias e.</li>
+            <li>Salida "¿Quiso decir&#x2026;?" ayudante al escribir.</li>
+            <li>Hacer archivo cat con resaltado de sintaxis.</li>
+            <li>
+              Avisar al usuario cuando el proceso de fondo termine o sea
+              abortado.
+            </li>
+            <li>
+              Completar los argumentos de los comandos del shell como el
+              sentimiento IDE.
+            </li>
+            <li>
+              Ventana de shell dedicada como la ventana del terminal inferior de
+              un IDE
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div id="outline-container-org320b128" class="outline-3">
-          <h3 id="características"><a id="org320b128"></a>Características:</h3>
-          <div class="outline-text-3" id="text-características">
-            <ul class="org-ul">
-              <li>Crear y gestionar múltiples buffers eshell.</li>
-              <li>
-                Añade algunos comandos útiles, como: limpiar el buffer, cambiar
-                a sudo, etc.
-              </li>
-              <li>
-                Mostrar información extra y color como zsh, impulsado por
-                "eshell-prompt-extras
-              </li>
-              <li>Validar y resaltar el comando antes de enviar a eshell.</li>
-              <li>Cambiar el nombre del buffer por el nombre de directorio.</li>
-              <li>Agregar las terminaciones para el comando git.</li>
-              <li>Integrar "eshell".</li>
-              <li>Descomprimir archivos.</li>
-              <li>Abrir el archivo con el alias e.</li>
-              <li>Salida "¿Quiso decir&#x2026;?" ayudante al escribir.</li>
-              <li>Hacer archivo cat con resaltado de sintaxis.</li>
-              <li>
-                Avisar al usuario cuando el proceso de fondo termine o sea
-                abortado.
-              </li>
-              <li>
-                Completar los argumentos de los comandos del shell como el
-                sentimiento IDE.
-              </li>
-              <li>
-                Ventana de shell dedicada como la ventana del terminal inferior
-                de un IDE
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div id="outline-container-org723438c" class="outline-2">
+        <h2 id="instalación"><a id="org723438c"></a>Instalación:</h2>
+        <div class="outline-text-2" id="text-instalación">
+          <p>El proyecto está en github entonces:</p>
 
-        <div id="outline-container-org573bc84" class="outline-3">
-          <h3 id="instalación"><a id="org573bc84"></a>Instalación:</h3>
-          <div class="outline-text-3" id="text-instalación">
-            <p>El proyecto está en github entonces:</p>
-
-            <pre class="example">
+          <pre class="example">
 cd .emacs.d
 git clone https://github.com/manateelazycat/aweshell.git
 </pre
-            >
+          >
 
-            <p>
-              después hay que agregar el load-path en el archivo <b>.emacs</b>.
-            </p>
+          <p>
+            después hay que agregar el load-path en el archivo <b>.emacs</b>.
+          </p>
 
-            <pre class="example">
+          <pre class="example">
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/aweshell"))
 (require 'aweshell)
 </pre
-            >
-          </div>
-        </div>
-
-        <div id="outline-container-org410d6c9" class="outline-3">
-          <h3 id="comandos-de-aweshell-y-mis-atajos-en-emacs">
-            <a id="org410d6c9"></a>Comandos de aweshell y mis atajos en emacs:
-          </h3>
-          <div
-            class="outline-text-3"
-            id="text-comandos-de-aweshell-y-mis-atajos-en-emacs"
           >
-            <table>
-              <colgroup>
-                <col class="org-left" />
+        </div>
+      </div>
 
-                <col class="org-left" />
+      <div id="outline-container-orge232584" class="outline-2">
+        <h2 id="comandos-de-aweshell-y-mis-atajos-en-emacs">
+          <a id="orge232584"></a>Comandos de aweshell y mis atajos en emacs:
+        </h2>
+        <div
+          class="outline-text-2"
+          id="text-comandos-de-aweshell-y-mis-atajos-en-emacs"
+        >
+          <table>
+            <colgroup>
+              <col class="org-left" />
 
-                <col class="org-left" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col" class="org-left">Comando</th>
-                  <th scope="col" class="org-left">Abreviación</th>
-                  <th scope="col" class="org-left">Atajo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="org-left">aweshell-new</td>
-                  <td class="org-left">M-x aw-new RET</td>
-                  <td class="org-left">C-xn</td>
-                </tr>
+              <col class="org-left" />
 
-                <tr>
-                  <td class="org-left">aweshell-next</td>
-                  <td class="org-left">M-x aw-nex RET</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
+              <col class="org-left" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" class="org-left">Comando</th>
+                <th scope="col" class="org-left">Abreviación</th>
+                <th scope="col" class="org-left">Atajo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="org-left">aweshell-new</td>
+                <td class="org-left">M-x aw-new RET</td>
+                <td class="org-left">C-xn</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-prev</td>
-                  <td class="org-left">M-x aw-p RET</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
+              <tr>
+                <td class="org-left">aweshell-next</td>
+                <td class="org-left">M-x aw-nex RET</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-clear-buffer</td>
-                  <td class="org-left">&#xa0;</td>
-                  <td class="org-left">C-l</td>
-                </tr>
+              <tr>
+                <td class="org-left">aweshell-prev</td>
+                <td class="org-left">M-x aw-p RET</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-sudo-toggle</td>
-                  <td class="org-left">&#xa0;</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
+              <tr>
+                <td class="org-left">aweshell-clear-buffer</td>
+                <td class="org-left">&#xa0;</td>
+                <td class="org-left">C-l</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-switch-buffer</td>
-                  <td class="org-left">M-x a-sw RET</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
+              <tr>
+                <td class="org-left">aweshell-sudo-toggle</td>
+                <td class="org-left">&#xa0;</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-dedicated-toggle</td>
-                  <td class="org-left">M-x a-d-t RET</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
+              <tr>
+                <td class="org-left">aweshell-switch-buffer</td>
+                <td class="org-left">M-x a-sw RET</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-dedicated-open</td>
-                  <td class="org-left">M-x aw-o RET</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
+              <tr>
+                <td class="org-left">aweshell-dedicated-toggle</td>
+                <td class="org-left">M-x a-d-t RET</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
 
-                <tr>
-                  <td class="org-left">aweshell-dedicated-close</td>
-                  <td class="org-left">M-x aw&#x2013;c RET</td>
-                  <td class="org-left">&#xa0;</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <tr>
+                <td class="org-left">aweshell-dedicated-open</td>
+                <td class="org-left">M-x aw-o RET</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
+
+              <tr>
+                <td class="org-left">aweshell-dedicated-close</td>
+                <td class="org-left">M-x aw&#x2013;c RET</td>
+                <td class="org-left">&#xa0;</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="taglist">

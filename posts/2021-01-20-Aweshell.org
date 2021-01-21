@@ -2,10 +2,6 @@
 #+date: <2021-01-20 07:54>
 #+filetags: emacs
 
-* Aweshell
-   :PROPERTIES:
-   :CUSTOM_ID: aweshell
-   :END:
 
 Aweshell en un paquete de emacs que sirve para darle más poder a eshell.
 

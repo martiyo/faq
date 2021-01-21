@@ -2,11 +2,6 @@
 #+date: <2021-01-21 12:18>
 #+filetags: linux
 
-** Cron
-   :PROPERTIES:
-   :CUSTOM_ID: cron
-   :END:
-
 En el sistema operativo Unix, cron es un administrador regular de
 procesos en segundo plano (demonio) que ejecuta procesos o guiones a
 intervalos regulares (por ejemplo, cada minuto, día, semana o mes). Los
