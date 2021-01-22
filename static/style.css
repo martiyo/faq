@@ -63,11 +63,11 @@ a {
   border-right: none;
   text-align: right;
 }
-.header ul {
-  list-style-type: none;
-  margin-top: 20px;
-  margin-bottom: 2px;
-}
+/* .header ul {
+   list-style-type: none;
+   margin-top: 20px;
+   margin-bottom: 2px;
+   } */
 .header ul li {
   display: inline;
   margin-left: 5px;
@@ -130,4 +130,14 @@ td {
 }
 thead {
   background: #010;
+}
+
+.footer {
+  border-top: dashed #00ff00 1px;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  margintop: 70px;
+  //margin-left: 93px;
+  margin-bottom: 70px;
 }
