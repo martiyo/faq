@@ -112,10 +112,6 @@ code {
   margin-top: 15px;
 }
 
-/*==========
- * Tables
-*===========
-*/
 table {
   width: 100%;
   // border: 1px solid #00ff00;
@@ -132,12 +128,12 @@ thead {
   background: #010;
 }
 
-.footer {
-  border-top: dashed #00ff00 1px;
-  border-left: none;
-  border-right: none;
-  text-align: center;
-  margintop: 70px;
-  //margin-left: 93px;
-  margin-bottom: 70px;
-}
+/* .footer {
+   border-top: dashed #00ff00 1px;
+   border-left: none;
+   border-right: none;
+   text-align: center;
+   margintop: 70px;
+   //margin-left: 93px;
+   margin-bottom: 70px;
+   } */
