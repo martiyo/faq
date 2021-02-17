@@ -4,7 +4,93 @@
 <title><![CDATA[EmacsFAQ]]></title>
 <description><![CDATA[EmacsFAQ]]></description>
 <link>https://martiyo.github.io/faq/</link>
-<lastBuildDate>mié, 10 feb 2021 10:35:15 -0300</lastBuildDate>
+<lastBuildDate>mié, 17 feb 2021 14:40:29 -0300</lastBuildDate>
+<item>
+  <title><![CDATA[Busqueda con grep en emacs]]></title>
+  <description><![CDATA[
+      <p>
+        El comando <code>grep</code> de emacs te permite ejecutar el programa
+        <code>grep</code> de Unix o GNU/Linux, que busca en los archivos las
+        líneas que coinciden con una expresión regular. El comando de emacs
+        colorea la salida y hace que se pueda hacer clic en las líneas
+        encotradas: cuando se hace clic en resultado de la búsqueda, emacs
+        visita el archivo de destino en la ocurrencia.
+      </p>
+
+      <p>Por jemplo:</p>
+
+      <pre class="example">
+M-x grep RET
+</pre
+      >
+
+      <p>al hacer esto, emacs te muestra en el minibuffer</p>
+
+      <pre class="example">
+M-x grep --color -nH --null -e 
+</pre
+      >
+
+      <p>donde&#x2026;</p>
+
+      <ul class="org-ul">
+        <li><b>-color</b> muestra la busqueda en color.</li>
+        <li>
+          <b>-n</b> indica el número de linea en que aparece la expresión
+          buscada dentro de cada archivo.
+        </li>
+        <li><b>-H</b> muestra el nombre completo de cada archivo</li>
+        <li>
+          <b>&#x2013;null</b> introduce el caracter ASCII NULL para evitar
+          complicaciones caundo el nombre del archivo tiene un corte de línea.
+        </li>
+        <li>
+          <b>-e</b> para indicar la expresión a buscar, que se escribe a
+          continuación, se pueden usar expresiones regulares y caracteres
+          comodín.
+        </li>
+      </ul>
+
+      <p>
+        entonces solo hay que agrear la expresión regular a buscar y el archivo
+        o archivos donde buscar.
+      </p>
+
+      <p>Ejemplo:</p>
+
+      <pre class="example">
+M-x grep --color -nH --null -e setq ~/.emacs.d/init.el
+</pre
+      >
+
+      <p>
+        esto lista todas las líneas que coinciden con <b>setq</b> en el archivo
+        <b>init.el</b>, mostrando el nombre del del archivo y el numero de
+        línea, al pulsar RET o hacer click en una de las líneas el archivo se
+        abre en la correspondiente linea.
+      </p>
+
+      <div id="outline-container-org05968e2" class="outline-2">
+        <h2 id="org05968e2">lgrep y rgrep</h2>
+        <div class="outline-text-2" id="text-org05968e2">
+          <p>
+            Ambos te preguntan lo que debe buscar de manera conveniente.
+            <code>lgrep</code> busca en el directorio actual y
+            <code>rgrep</code> busca en el árbol de directorios actual.
+            <code>rgrep</code> conoce los sistemas de control de versiones por
+            lo que es posible evitar buscar en los directorios de control.
+          </p>
+        </div>
+      </div>
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-emacs.html">emacs</a>
+      </div>
+    ]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://martiyo.github.io/faq/2021-02-17-busquedas-con-grep-en-emacs.html</link>
+  <pubDate>mié, 17 feb 2021 11:10:00 -0300</pubDate>
+</item>
 <item>
   <title><![CDATA[Dashboard, una pantalla de inicio extencible para emacs]]></title>
   <description><![CDATA[
@@ -853,8 +939,8 @@ sudo find ~/webDAV -type f -exec chmod ug+rw {} \;
         configuración.
       </p>
 
-      <div id="outline-container-org45479ec" class="outline-2">
-        <h2 id="instalación"><a id="org45479ec"></a>Instalación</h2>
+      <div id="outline-container-orge2cf8a0" class="outline-2">
+        <h2 id="instalación"><a id="orge2cf8a0"></a>Instalación</h2>
         <div class="outline-text-2" id="text-instalación">
           <pre class="example">
 sudo apt install moc
@@ -873,8 +959,8 @@ sudo apt install moc-ffmpeg-plugin
         </div>
       </div>
 
-      <div id="outline-container-org1150c79" class="outline-2">
-        <h2 id="uso"><a id="org1150c79"></a>Uso</h2>
+      <div id="outline-container-org519ef0f" class="outline-2">
+        <h2 id="uso"><a id="org519ef0f"></a>Uso</h2>
         <div class="outline-text-2" id="text-uso">
           <p>
             El binario tiene el nombre <b>mocp</b> para evitar problemas con
@@ -975,9 +1061,9 @@ k              Selecciona el siguiente preset del ecualizador
         </div>
       </div>
 
-      <div id="outline-container-orgd168ae1" class="outline-2">
+      <div id="outline-container-org9a2e9ec" class="outline-2">
         <h2 id="directorio-de-configuración-.moc">
-          <a id="orgd168ae1"></a>Directorio de configuración: ~/.moc
+          <a id="org9a2e9ec"></a>Directorio de configuración: ~/.moc
         </h2>
         <div class="outline-text-2" id="text-directorio-de-configuración-.moc">
           <p>
@@ -1011,11 +1097,11 @@ mv config.example config
           </p>
         </div>
       </div>
-      <div id="outline-container-org82bd172" class="outline-2">
-        <h2 id="org82bd172">
+      <div id="outline-container-org2e14657" class="outline-2">
+        <h2 id="org2e14657">
           ~/.moc/themes**. Es posible descargar temas de configuración, o
         </h2>
-        <div class="outline-text-2" id="text-org82bd172">
+        <div class="outline-text-2" id="text-org2e14657">
           <p>
             editarlo uno y guardarlo en uno de estos directorios. Básicamente
             cada elemento tiene la siguiente estructura:
@@ -1034,7 +1120,7 @@ default (sirve como transparencia)
 black
 red
 green
-yollow
+yellow
 blue
 magenta
 cyan
@@ -1136,8 +1222,8 @@ plist_time = yellow default
         </div>
       </div>
 
-      <div id="outline-container-org14f4d51" class="outline-2">
-        <h2 id="ecualizador"><a id="org14f4d51"></a>Ecualizador</h2>
+      <div id="outline-container-org130afaf" class="outline-2">
+        <h2 id="ecualizador"><a id="org130afaf"></a>Ecualizador</h2>
         <div class="outline-text-2" id="text-ecualizador">
           <p>
             Moc tiene la opción de utilizar un ecualizador pero necesita de
@@ -1164,9 +1250,9 @@ rm eqsets.tar.gz
           </p>
         </div>
 
-        <div id="outline-container-orgf07ce03" class="outline-3">
+        <div id="outline-container-org810d6d7" class="outline-3">
           <h3 id="problemas-frecuentes">
-            <a id="orgf07ce03"></a>Problemas frecuentes
+            <a id="org810d6d7"></a>Problemas frecuentes
           </h3>
           <div class="outline-text-3" id="text-problemas-frecuentes">
             <p>Mensaje de error al lanzar MOC:</p>
