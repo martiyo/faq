@@ -21,7 +21,7 @@
         <ul>
           <li><a href="https://martiyo.github.io/faq">/home</a></li>
           <li><a href="https://martiyo.github.io/faq/about">/about</a></li>
-          <li><a href="https://martiyo.github.io/faq/contact">/contact</a></li>
+          <li><a href="https://martiyo.github.io/faq">/contact</a></li>
         </ul>
         <h1>El universo perdido de GNU/Emacs</h1>
         <blockquote>
@@ -29,14 +29,17 @@
           encuentro por ahí.
         </blockquote>
         <form>
-          <input type="text" placeholder="Search..." />
+          <input
+            type="search"
+            onkeyup="search()"
+            id="myInput"
+            placeholder="Search..."
+          />
         </form>
-        <br />
       </div>
     </div>
     <div id="content">
-      <h1 class="title">Posts tagged "linux":</h1>
-      <h2 class="post-title">
+      <h2 class="post-title" id="post-title">
         <a href="https://martiyo.github.io/faq/2018-09-15-Cron.html"
           >Planificación y administración de tareas con Cron y Crontab</a
         >
@@ -56,7 +59,21 @@
         <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
         <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
       </div>
-      <h2 class="post-title">
+      <h2 class="post-title" id="post-title">
+        <a href="https://martiyo.github.io/faq/2021-01-20-Aweshell.html"
+          >Todo el poder a la shell!</a
+        >
+      </h2>
+      <div class="post-date">20 ene 2021</div>
+      <p>
+        Aweshell en un paquete de emacs que sirve para darle más poder a eshell.
+      </p>
+      (...)
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-emacs.html">emacs</a>
+      </div>
+      <h2 class="post-title" id="post-title">
         <a href="https://martiyo.github.io/faq/2020-12-23-servidor-webdav.html"
           >Servidor webDAV</a
         >
@@ -73,7 +90,25 @@
         <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
         <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
       </div>
-      <h2 class="post-title">
+      <h2 class="post-title" id="post-title">
+        <a href="https://martiyo.github.io/faq/2020-12-21-emacs-bookmarks.html"
+          >Emacs Bookmarks</a
+        >
+      </h2>
+      <div class="post-date">21 dic 2020</div>
+      <p>
+        Los marcadores registran ubicaciones para que puedas volver a ellas más
+        tarde. Los marcadores de Emacs utilizan tres cosas que están
+        relacionadas pero son diferentes: una lista de marcadores , un archivo
+        de marcadores y una pantalla de lista de marcadores . Comprenderlos es
+        importante para usar los marcadores de Emacs.
+      </p>
+      (...)
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-emacs.html">emacs</a>
+      </div>
+      <h2 class="post-title" id="post-title">
         <a href="https://martiyo.github.io/faq/2020-12-19-mocp.html"
           >Mocp reproducir audio desde la terminal</a
         >
@@ -100,63 +135,6 @@
         <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
         <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
       </div>
-      <h2 class="post-title">
-        <a href="https://martiyo.github.io/faq/2020-12-11-mplayer-resumer.html"
-          >mplayer-resumer</a
-        >
-      </h2>
-      <div class="post-date">11 dic 2020</div>
-      <p>
-        Lo unico que le faltaba al bueno de mplayer era poder retomar la
-        reprocucción en el punto donde había quedado,
-        <b>mplayer-resumer</b> resuelve esta situación.
-      </p>
-      (...)
-      <div class="taglist">
-        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
-        <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
-      </div>
-      <h2 class="post-title">
-        <a
-          href="https://martiyo.github.io/faq/2020-11-20-instalar-mongodb-con-docker.html"
-          >Instalar mongodb con docker</a
-        >
-      </h2>
-      <div class="post-date">20 nov 2020</div>
-      <p>Instalación y ejecución de mongodb en docker.</p>
-      (...)
-      <div class="taglist">
-        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
-        <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
-      </div>
-      <h2 class="post-title">
-        <a href="https://martiyo.github.io/faq/2020-11-06-instalar-docker.html"
-          >Instalar Docker engine usando el repositorio</a
-        >
-      </h2>
-      <div class="post-date">06 nov 2020</div>
-      <p>
-        Instalando desde el repositorio despues podés actualizarlo
-        automaticamente.
-      </p>
-      (...)
-      <div class="taglist">
-        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
-        <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
-      </div>
-      <h2 class="post-title">
-        <a
-          href="https://martiyo.github.io/faq/2018-02-27-el-demonio-minidlna.html"
-          >El demonio miniDLNA</a
-        >
-      </h2>
-      <div class="post-date">22 feb 2018</div>
-      <p>El universo perdido de GNU/Emacs</p>
-      (...)
-      <div class="taglist">
-        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
-        <a href="https://martiyo.github.io/faq/tag-linux.html">linux</a>
-      </div>
       <div id="archive">
         <a href="https://martiyo.github.io/faq/archive.html">Other posts</a>
       </div>
@@ -167,5 +145,28 @@
       </div>
       <footer></footer>
     </div>
+    <script>
+      function search() {
+        // Declare variables
+        var input, filter, posttitle, title, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        posttitle = document.getElementById("post-title");
+        title = posttitle.getElementsByTagName("a");
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < title.length; i++) {
+          a = title[i].getElementsByTagName("a")[0];
+          console.log("mi console.log", a);
+          txtValue = a.innerText;
+
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            title[i].style.display = "";
+          } else {
+            title[i].style.display = "none";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

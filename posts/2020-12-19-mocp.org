@@ -165,7 +165,7 @@ Los colores permitidos son:
     black
     red
     green
-    yollow
+    yellow
     blue
     magenta
     cyan

@@ -19,11 +19,11 @@ Algunos comandos de marcadores para comenzar:
 
 La opción ‘bookmark-default-file’ define un archivo bookmarks , que por defecto es ` ~/.emacs.d/bookmarks` en las versiones más recientes. Emacs mantiene el archivo automáticamente a medida que crea, cambia y elimina marcadores.
 
-** Lista de marcadores
+* Lista de marcadores
 
 El comando *bookmark-bmenu-list*, vinculado a *C-x r l*, proporciona un menú conveniente para acceder a los marcadores. La lista es como un dired para marcadores
 
-***** Claves en *bookmark list*:
+* Claves en *bookmark list*:
 
       + *a* mostrar anotación para el marcador actual.
       
