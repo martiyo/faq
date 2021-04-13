@@ -4,7 +4,186 @@
 <title><![CDATA[EmacsFAQ]]></title>
 <description><![CDATA[EmacsFAQ]]></description>
 <link>https://martiyo.github.io/faq/</link>
-<lastBuildDate>dom, 21 mar 2021 13:56:20 -0300</lastBuildDate>
+<lastBuildDate>mar, 13 abr 2021 10:19:15 -0300</lastBuildDate>
+<item>
+  <title><![CDATA[Neotree]]></title>
+  <description><![CDATA[
+
+      <div id="outline-container-org300fc4c" class="outline-2">
+        <h2 id="org300fc4c">Instalación</h2>
+        <div class="outline-text-2" id="text-org300fc4c">
+          <pre class="example">
+M-x package-install RET 
+</pre
+          >
+        </div>
+
+        <div id="outline-container-orgb81d715" class="outline-3">
+          <h3 id="orgb81d715">En el archivo init.el hay que agregar esto:</h3>
+          <div class="outline-text-3" id="text-orgb81d715">
+            <pre class="example">
+(add-to-list 'load-path "~/.emacs.d/elpa/neotree-2020324.1946")
+(require 'neotree)
+(global-set-key [f11] 'neotree-toggle)
+</pre
+            >
+          </div>
+        </div>
+
+        <div id="outline-container-org2aaa8f1" class="outline-3">
+          <h3 id="org2aaa8f1">Abrir/cerrar</h3>
+          <div class="outline-text-3" id="text-org2aaa8f1">
+            <pre class="example">
+f11
+</pre
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="outline-container-org6f9fb2c" class="outline-2">
+        <h2 id="org6f9fb2c">Keybinding</h2>
+        <div class="outline-text-2" id="text-org6f9fb2c">
+          <p>En el buffer de Neotree:</p>
+
+          <ul class="org-ul">
+            <li><b>n</b> linea siguiente, <b>p</b></li>
+            <li>
+              <b>SPC</b> o <b>RET</b> o <b>TAB</b> abrir el elemento actual si
+              es un archivo. Plegar/desplegar si es un elemento.
+            </li>
+            <li><b>U</b> subir un directorio.</li>
+            <li><b>g</b> actualizar.</li>
+            <li><b>A</b> maximizar/minimizar.</li>
+            <li><b>H</b> mostrar/ocultar archivos ocultos.</li>
+            <li><b>O</b> abre un directorio recursivamente.</li>
+            <li>
+              <b>C-c C-n</b> crea un nuevo archivo o un nuevo directorio si el
+              nombre termina con <b>/</b> .
+            </li>
+            <li><b>C-c C-d</b> elimina un archivo o directorio.</li>
+            <li><b>C-c C-r</b> renombrar archivo o directorio.</li>
+            <li><b>C-c C-c</b> cambiar directorio.</li>
+            <li><b>C-c C-p</b> copiar un archivo o directorio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="outline-container-orgb26688f" class="outline-2">
+        <h2 id="orgb26688f">Configuración</h2>
+        <div class="outline-text-2" id="text-orgb26688f">
+          <p>Mi configuración con use-package:</p>
+
+          <pre class="example">
+(use-package neotree
+:ensure t
+:load-path "~/.emacs.d/elpa/neotree-20200324.1946"
+:config
+(setq neo-theme 'icons)
+(setq neo-smart-open t)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+(global-set-key [f11] 'neotree-toggle))
+</pre
+          >
+        </div>
+
+        <div id="outline-container-orgc80452c" class="outline-3">
+          <h3 id="orgc80452c">Connsejos útiles</h3>
+          <div class="outline-text-3" id="text-orgc80452c">
+            <p>
+              Para que cada vez que se abra <b>neotree</b> encuentre al archivo
+              y salte a ese directorio:
+            </p>
+
+            <pre class="example">
+(setq neo-smart-open t)
+</pre
+            >
+
+            <p>
+              Al ejecutar <b>projectile-switch-project</b>
+              <b>(C-c p p), *neotree</b> cambiará a ese directorio
+              automaticamente:
+            </p>
+
+            <pre class="example">
+(setq projectile-switch-project-action 'neotree-projectile-action)
+</pre
+            >
+
+            <p>
+              Esto se integra perfectamente con <b>Dashboard</b> (que a la vez
+              se integra con <b>Projectile)</b> y muestran una lista de los
+              últimos proyectos abiertos y al cliquear en uno se abre el
+              proyecto en <b>Neotree</b>.
+            </p>
+
+            <p>
+              Para habilitar los iconos basta con instalar el paquete
+              all-the-icons y agregar esto:
+            </p>
+
+            <pre class="example">
+(setq neo-theme 'icons)
+</pre
+            >
+
+            <p>
+              <b>Fuente</b>
+            </p>
+
+            <p>
+              Esto es una traducción casi literal de la
+              <a href="https://github.com/jaypei/emacs-neotree"
+                >pagina de github</a
+              >. La
+              <a href="https://www.emacswiki.org/emacs/NeoTree">emacswiki</a>
+              tiene unos tips muy útiles.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-emacs.html">emacs</a>
+      </div>
+    ]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://martiyo.github.io/faq/2021-04-11-neotree.html</link>
+  <pubDate>dom, 11 abr 2021 12:33:00 -0300</pubDate>
+</item>
+<item>
+  <title><![CDATA[It's Magit!]]></title>
+  <description><![CDATA[
+
+      <div id="outline-container-org4b64df5" class="outline-2">
+        <h2 id="org4b64df5">¿Que es magit?</h2>
+        <div class="outline-text-2" id="text-org4b64df5">
+          <p>
+            Magit es una interfaz de usuario completa basada en texto para Git .
+            Llena la brecha evidente entre la interfaz de línea de comandos de
+            Git y varias GUI, lo que le permite realizar tareas de control de
+            versiones triviales y elaboradas con solo un par de pulsaciones de
+            teclas mnemotécnicas. Magit parece una versión mejorada de lo que
+            obtiene después de ejecutar algunos comandos de Git, pero en Magit
+            cada bit de información visible también es procesable hasta un punto
+            que va mucho más allá de lo que proporciona cualquier GUI de Git y
+            se encarga de actualizar automáticamente esta salida cuando se
+            vuelve obsoleto. En segundo plano, Magit solo ejecuta comandos de
+            Git y, si lo desea, puede ver qué se está ejecutando exactamente, lo
+            que le permite aprender la gitlínea de comandos usando Magit.
+          </p>
+        </div>
+      </div>
+      <div class="taglist">
+        <a href="https://martiyo.github.io/faq/tags.html">Tags</a>:
+        <a href="https://martiyo.github.io/faq/tag-git.html">git</a>
+      </div>
+    ]]></description>
+  <category><![CDATA[git]]></category>
+  <link>https://martiyo.github.io/faq/2021-04-04-magit.html</link>
+  <pubDate>dom, 04 abr 2021 23:45:00 -0300</pubDate>
+</item>
 <item>
   <title><![CDATA[Busqueda con grep en emacs]]></title>
   <description><![CDATA[
