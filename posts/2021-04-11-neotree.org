@@ -2,6 +2,8 @@
 #+date: <2021-04-11 12:33>
 #+filetags: emacs
 
+Arbol de directorio integrado en *emacs*.
+
 ** Instalación
 
 #+BEGIN_SRC 
@@ -11,9 +13,9 @@ M-x package-install RET
 *** En el archivo init.el hay que agregar esto:
     
 #+BEGIN_SRC
-(add-to-list 'load-path "~/.emacs.d/elpa/neotree-2020324.1946")
-(require 'neotree)
-(global-set-key [f11] 'neotree-toggle)
+  (add-to-list 'load-path "~/.emacs.d/elpa/neotree-2020324.1946")
+  (require 'neotree)
+  (global-set-key [f11] 'neotree-toggle)
 #+END_SRC
 
 *** Abrir/cerrar
